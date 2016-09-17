@@ -96,7 +96,15 @@ More \uline{relative} variation is higher CV, less \uline{relative} variation is
 \textbf{Intersection:} The set of outcomes that are in both A and B. A$\cap$B\\
 \textbf{Complement:} The set of outcomes in the sample space not in A. $A^C$\\
 \textbf{Mutually Exclusive Events:} Events that share no outcomes in common.\\
-\textbf{\uline{C2S2:}}\\
+\textbf{\uline{C2S3:}}\\
+\textbf{Conditional Probability:} The probability of event A, given that event B has occurred P(A$\vert$B)\\
+\textbf{Independent Events:} If two events don't affect each other\\
+Two events are independent if and only if: P(A$\vert$B) = P(A)\\
+\textbf{Exhaustive set of events:} A set of events is exhaustive of the sample space if their union is equivalent to the whole sample space.\\
+\textbf{Bayes' Theorem:}\\
+$P(A\vert B) = \frac{P(A\cap B)}{P(B)} = \frac{P(B\vert A)\cdot P(A)}{P(B)}$\\
+$P(A\vert B) = \frac{P(B\vert A)\cdot P(A)}{P(B\vert A)\cdot P(A) + P(B\vert A^C)\cdot P(A^C)}$\\
+$P(A_i\vert B) = \frac{P(B\vert A_i)\cdot(P(A_i)}{\sum_{j=1}^n P(B\vert A_j)\cdot P(A_j)}$
 \vfill
 \columnbreak
 \vspace*{\fill}
@@ -126,5 +134,18 @@ Permutation of \textit{k} objects from \textit{n} objects: $\frac{n!}{(n-k)!}$\\
 Combinations of \textit{k} objects from \textit{n} objects: $\frac{n!}{k!(n-k)!}$\\
 Combinations of groups with \textit{n} objects, \textit{r} groups, and group sizes $k_i$: $\frac{n!}{k_1!\cdot k_2! \cdot k_3! \ldots k_r!}$\\
 \textit{N} total outcomes and $n_a$ outcomes for event A has probability: P(A) = $\frac{n_a}{N}$\\
+P(A$\vert$B) = $\frac{P(A\cap B}{B}$\\
+P(B$\vert$A) = $\frac{P(A\cap B}{A}$\\
+P(A$\cap$B) = P(A$\vert$B)$\cdot$ P(B) = P(B$\vert$A)$\cdot$ P(A)\\
+Independent Events:\\ P(A$\vert$B) = P(A) $\leftrightarrow$ P(B$\vert$A) = P(B)\\
+Multiplication Rule for Independent Events:\\ P(A$\cap$B) = P(A)$\cdot$P(B)\\
+$A_1,A_2,\ldots,A_N$ are a set of mutually exclusive events exhaustive of a sample space:\\
+\begin{displaymath}
+P(B) = \sum_{i=1}^n P(A_i\cap B)
+\end{displaymath}
+If $P(A_i) \neq 0$ for each $A_i$
+\begin{displaymath}
+P(B) = \sum_{i=1}^nP(B\vert A_i)\cdot P(A_i)
+\end{displaymath}
 \end{multicols}
 \end{document}
