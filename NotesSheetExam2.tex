@@ -1,6 +1,6 @@
 \documentclass[letter, 12pt]{article}
 \usepackage[margin=0.6in,paperwidth=8.5in, paperheight=11in]{geometry}
-\usepackage{graphicx,longtable, stmaryrd, ulem, setspace,listings,enumerate,tikz,fancyhdr,multicol, hyperref, calrsfs, float,ifpdf, url, amsmath, amssymb, comment,color,xcolor}
+\usepackage{graphicx,longtable, stmaryrd, ulem, setspace,listings,enumerate,tikz,fancyhdr,multicol, hyperref, calrsfs, float,ifpdf, url, amsmath, amssymb, comment,color,xcolor,dsfont}
 \usepackage[mathscr]{euscript}
 \pagestyle{fancy}
 
@@ -43,11 +43,35 @@ STAT 4033
 Exam 2 Notes \hfill Name: \uline{Cooper Morris}
 \begin{multicols}{2}
 \textbf{\uline{C2S4:}}\\
-
-
+\textbf{Random Variable:} X, assigns a numeric value to outcomes in a sample space.\\
+\textbf{Discrete Random Variable:} Possible values are countable, sum of two dice.\\
+\textbf{Continuous Random Variable:} Possible values continuous, weight of random person.\\
+\textbf{Probability Mass Function:} \(P(X=x) = p(x)\) \\
+\textbf{Cumulative Distribution Function:} \(P(X\leq x) \) Denoted by \(F(x)\) \\
+\(0\leq p(x) \leq 1\)\\
+\(\sum_xp(x) = 1\)\\
+\textbf{Support:} the set of values such that \(f(x) > 0	\)\\
+\textbf{Percentile:} \(x_p\) such that \(P(X\leq x_p) = \frac{p}{100}\)\\
+\(F(x_p) = \int_{-\infty}^{x_p} f(x)\,dx = \frac{p}{100}\)\\
+\vfill
+\columnbreak
+\vspace*{\fill}
 \end{multicols}
 \newpage
 \begin{multicols}{2}
-
+\textbf{Discrete Random Variables:}\\
+\(\mu_x = \mathds{E}[X] = \sum_xx\cdot p(x)\)\\
+\(\sigma^2 = \sum_xx^2\cdot p(x) - \mu_x^2\)\\
+\(\mathds{E}[g(X)] = \sum_xg(x)\cdot p(x)\)\\
+\textbf{Continuous Random Variables:}\\
+\(P(a\leq X \leq b) = \int_a^b f(x)\,dx\)\\
+\(\mu_x = \mathds{E}[X] = \int_{-\infty}^\infty x \cdot f(x)\,dx\)\\
+\(\sigma^2 = \int_{-\infty}^\infty x^2\cdot f(x)\,dx - \mu_x^2 \)\\
+\(\mathds{E}[g(X)] = \int_{-\infty}^\infty  g(x) \cdot f(x)\,dx\)\\
+\\ \( (\mu \pm k\sigma_x)\)\\
+\(P(\vert X - \mu_x \vert > k\sigma_x) = \frac{1}{k^2}\)
+\vfill
+\columnbreak
+\vspace*{\fill}
 \end{multicols}
 \end{document}
