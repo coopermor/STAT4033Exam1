@@ -53,6 +53,13 @@ Exam 2 Notes \hfill Name: \uline{Cooper Morris}
 \textbf{Support:} the set of values such that \(f(x) > 0	\)\\
 \textbf{Percentile:} \(x_p\) such that \(P(X\leq x_p) = \frac{p}{100}\)\\
 \(F(x_p) = \int_{-\infty}^{x_p} f(x)\,dx = \frac{p}{100}\)\\
+\textbf{\uline{C2S6:}}\\
+\textbf{Jointly Distributed Random Variable:} Two or more random variables that are related when considering ``individuals" in a population.\\
+\textbf{Joint Probability Mass Function:} \(P(X=x, Y=y) = p(x,y)\) \(P(X=x \cap Y=y)\) \\
+\textbf{Marginal Probability Mass Function:} \(P_x(x) = \sum_y p(x,y)\)\\
+\(f_x(x) = \int_{-\infty}^\infty f(x,y)\,dy\)\\
+Summing or integrating out the opposite variable gives you the marginal probability mass function for the variable you desire.
+
 \vfill
 \columnbreak
 \vspace*{\fill}
@@ -69,7 +76,33 @@ Exam 2 Notes \hfill Name: \uline{Cooper Morris}
 \(\sigma^2 = \int_{-\infty}^\infty x^2\cdot f(x)\,dx - \mu_x^2 \)\\
 \(\mathds{E}[g(X)] = \int_{-\infty}^\infty  g(x) \cdot f(x)\,dx\)\\
 \\ \( (\mu \pm k\sigma_x)\)\\
-\(P(\vert X - \mu_x \vert > k\sigma_x) = \frac{1}{k^2}\)
+\(P(\vert X - \mu_x \vert > k\sigma_x) = \frac{1}{k^2}\)\\
+\textbf{\uline{C2S5:}}\\
+\textbf{Linear Functions of Random Variables}\\
+\textbf{Linear Function:} \(Y = aX + b\)\\
+\textbf{Expected Value:} \( a\mathds{E}[X] + b\)\\
+\textbf{Variance:} \(a^2\cdot \textnormal{Var}(X)\)\\
+\textbf{Standard Deviation:} \(\vert a \vert \cdot \sigma_x\)\\	
+\\ \textbf{Linear Combinations of Random Variables}\\
+\textbf{Linear Combinations:} \(\sum_{i=1}^n c_iX_i\)\\
+\textbf{Expected Value:} \(\sum_{i=1}^n c_i \mathds{E}[X_i]\)\\
+\textbf{Variance:} \(\sum_{i=1}^n c_i^2\textnormal{Var}(X)\) where \(X_i\)s are independent\\
+Var(x+y) = Var(x) + Var(y)\\
+Var(x-y) = Var(x) + Var(y)\\
+\\ \textbf{Simple Random Samples}\\
+\(\bar{x} = \sum_{i=1}^n\frac{1}{n}\cdot x_i\)\\
+\(\mu_{\bar{x}} = \mathds{E}[\bar{x}] = \mu\)\\
+\(\sigma_x^2 = \textnormal{Var}(\bar{x})\)\\
+\(\sigma_{\bar{x}} = \frac{\sigma_x}{\sqrt{n}}\)\\
+\textbf{\uline{C2S6:}}\\
+\(0 \leq p(x,y) \leq 1\)\\
+\(\sum_x \sum_y p(x,y) = 1\)\\
+\(\int_{-\infty}^\infty \int_{-\infty}^\infty f(x,y)\,dx\,dy = 1\)\\
+\(P(a \leq x \leq b, c \leq y \leq d) = \int_c^d \int_a^b f(x,y) \,dx\,dy\)\\
+\(\mathds{E}[h(X,Y)] = \sum_x \sum_y h(x, y) p(x, y)\)\\
+\(\mathds{E}[h(X,Y)] = \int_{-\infty}^\infty \int_{-\infty}^\infty h(x, y) f(x, y)\,dx\,dy\)\\
+\(\textnormal{Cov}(X,Y) = \mu_{XY}-\mu_x\mu_y\)\\
+\(\rho_{X,Y} = \frac{\textnormal{Cov}(X,Y)}{\sqrt{\textnormal{Var}(X)\textnormal{Var}(Y)}}\)\\
 \vfill
 \columnbreak
 \vspace*{\fill}
