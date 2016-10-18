@@ -58,7 +58,28 @@ Exam 2 Notes \hfill Name: \uline{Cooper Morris}
 \textbf{Joint Probability Mass Function:} \(P(X=x, Y=y) = p(x,y)\) \(P(X=x \cap Y=y)\) \\
 \textbf{Marginal Probability Mass Function:} \(P_x(x) = \sum_y p(x,y)\)\\
 \(f_x(x) = \int_{-\infty}^\infty f(x,y)\,dy\)\\
-Summing or integrating out the opposite variable gives you the marginal probability mass function for the variable you desire.
+Summing or integrating out the opposite variable gives you the marginal probability mass function for the variable you desire.\\
+\textbf{\uline{C4S1: The Bernoulli Distribution}}\\
+X \(\sim\) Bernoulli(P)\\
+P is the probability of a success happening. 
+\(P(X=x) = p^X(1-p^{1-x})\)\\
+\(\mathds{E}[X] = \mu_X = p\)\\
+\(\textnormal{Var}(X) = p\cdot(1-p)\)\\
+\textbf{\uline{C4S4: The Binomial Distribution}}\\
+Chaining together \textit{n} independent Bernoulli trials. Think of a for loop running \textit{n} times.
+\(X \sim \textnormal{Bin}(n, p)\)\\
+\(p(x) = {n \choose x} p^x(1-p)^{n-x}\)\\
+\(\mathds{E}[X] = \mu_X = n\cdot p\)\\
+\(\textnormal{Var}(X) = n\cdot p\cdot(1-p)\)\\
+Mass function for \(X \sim \textnormal{Bin}(n, p)\):\\
+\(P(x) = P(X = x) = {n \choose x} \cdot p^x \cdot (1-p)^{n-x}\)\\
+Table A1 gives probabilities for the Binomial distribution in the form \(P(X \leq x)\)\\
+\(\mathds{E}[X] = \mu_X  = n\cdot p\)\\
+\(\sigma^2_X = \textnormal{Var}(X) = n\cdot p \cdot (1-p)\)\\
+\(\sigma_X = \sqrt{n\cdot p \cdot (1-p)}\)\\
+\(\hat{p} = \frac{x}{n} = \frac{\sum Y_i}{n}\) where \(\hat{p}\) is an estimator of \textit{p}.\\
+\(\mathds{E}[\hat{p}] = \mu_{\hat{p}}  = p\)\\
+\(\textnormal{Var}(\hat{p}) = \frac{p\cdot (1-p)}{n}\)\\
 
 \vfill
 \columnbreak
@@ -104,7 +125,24 @@ Var(x-y) = Var(x) + Var(y)\\
 \(\textnormal{Cov}(X,Y) = \mu_{XY}-\mu_x\mu_y\)\\
 \(\rho_{X,Y} = \frac{\textnormal{Cov}(X,Y)}{\sqrt{\textnormal{Var}(X)\textnormal{Var}(Y)}}\)\\
 \textbf{\uline{C3:}}\\
-\(\sigma_{g(X)} \approx \vert g'(X)\vert \cdot \sigma_X\)
+\(\sigma_{g(X)} \approx \vert g'(X)\vert \cdot \sigma_X\)\\
+\textbf{\uline{C4S1: The Bernoulli Distribution}}\\
+\(P(X=x) = p^X(1-p^{1-x})\)\\
+\(\mathds{E}[X] = \mu_X = p\)\\
+\(\textnormal{Var}(X) = p\cdot(1-p)\)\\
+\\
+\textbf{\uline{C4S4: The Binomial Distribution}}\\
+\(X \sim \textnormal{Bin}(n, p)\)\\
+\(p(x) = {n \choose x} p^x(1-p)^{n-x}\)\\
+\(\mathds{E}[X] = \mu_X = n\cdot p\)\\
+\(\textnormal{Var}(X) = n\cdot p\cdot(1-p)\)\\
+\(P(x) = P(X = x) = {n \choose x} \cdot p^x \cdot (1-p)^{n-x}\)\\
+\(\mathds{E}[X] = \mu_X  = n\cdot p\)\\
+\(\sigma^2_X = \textnormal{Var}(X) = n\cdot p \cdot (1-p)\)\\
+\(\sigma_X = \sqrt{n\cdot p \cdot (1-p)}\)\\
+\(\hat{p} = \frac{x}{n} = \frac{\sum Y_i}{n}\) where \(\hat{p}\) is an estimator of \textit{p}.\\
+\(\mathds{E}[\hat{p}] = \mu_{\hat{p}}  = p\)\\
+\(\textnormal{Var}(\hat{p}) = \frac{p\cdot (1-p)}{n}\)\\
 \vfill
 \columnbreak
 \vspace*{\fill}
