@@ -65,7 +65,7 @@ P is the probability of a success happening.
 \(P(X=x) = p^X(1-p^{1-x})\)\\
 \(\mathds{E}[X] = \mu_X = p\)\\
 \(\textnormal{Var}(X) = p\cdot(1-p)\)\\
-\textbf{\uline{C4S4: The Binomial Distribution}}\\
+\textbf{\uline{C4S2: The Binomial Distribution}}\\
 Chaining together \textit{n} independent Bernoulli trials. Think of a for loop running \textit{n} times.
 \(X \sim \textnormal{Bin}(n, p)\)\\
 \(p(x) = {n \choose x} p^x(1-p)^{n-x}\)\\
@@ -80,13 +80,37 @@ Table A1 gives probabilities for the Binomial distribution in the form \(P(X \le
 \(\hat{p} = \frac{x}{n} = \frac{\sum Y_i}{n}\) where \(\hat{p}\) is an estimator of \textit{p}.\\
 \(\mathds{E}[\hat{p}] = \mu_{\hat{p}}  = p\)\\
 \(\textnormal{Var}(\hat{p}) = \frac{p\cdot (1-p)}{n}\)\\
-
-\vfill
-\columnbreak
-\vspace*{\fill}
+\textbf{\uline{C4S3: The Poisson Distribution}}\\
+Taking the limit of the binomial distribution\\
+\(\lambda = n \cdot p\)\\
+\(X \sim \textnormal{Poisson}(\lambda)\)\\
+\(p(x) = \frac{e^{-\lambda}\cdot \lambda^x}{x!}\)\\
+\(\mathds{E}[X] = \mu_X = \lambda\)\\
+\(\textnormal{Var}(X) = \lambda\)\\
+Estimating over \textit{t} units over time or space:\\
+\(\hat{\lambda} = \frac{x}{t}\)\\
+\(\mathds{E}[\hat{\lambda}] = \lambda\)\\
+\(\textnormal{Var}(\hat{\lambda}) = \frac{\lambda}{t}\)\\
+\textbf{\uline{C4S4: The Hypergeometric Distribution}}\\
+A finite population of size \textit{N}, divided into two groups. \textit{R} items in group one and \textit{N-R} in group two. \textit{n} items selected without replacement.\\
+\(X \sim H(N, R, n)\)\\
+Probability Mass Function:\\
+\(p(x) = \frac{{R \choose X}{{N-R} \choose {n-x}}}{{N \choose n}}\)\\
+\(\mathds{E}[X] = \mu_X = n\cdot \frac{R}{N}\)\\
+\(\textnormal{Var}(X) = n\frac{R}{N}\cdot(1-\frac{R}{N})\cdot(\frac{N-n}{N-1})\)\\
+\textbf{\uline{Geometric Distribution:}}\\
+A sequence of independent Bernoulli trials where \textit{p} is constant and \textit{X} is the number of trials up to and including the first success. Think of a while loop with the first success as the terminating condition.\\
+\(X \sim \textnormal{Geom}(P)\)\\
+Probability Mass Function:\\
+\(p(x) = (1-p)^{x-1} \cdot p\)\\
+\(\mathds{E}[X] = \mu_X = \frac{1}{p}\)\\
+\(\textnormal{Var}(X) = \frac{1-p}{p^2}\)\\
+\(\sigma_X = \sqrt{\frac{1-p}{p^2}}\)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{multicols}
 \newpage
 \begin{multicols}{2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \textbf{Discrete Random Variables:}\\
 \(\mu_x = \mathds{E}[X] = \sum_xx\cdot p(x)\)\\
 \(\sigma^2 = \sum_xx^2\cdot p(x) - \mu_x^2\)\\
@@ -131,7 +155,7 @@ Var(x-y) = Var(x) + Var(y)\\
 \(\mathds{E}[X] = \mu_X = p\)\\
 \(\textnormal{Var}(X) = p\cdot(1-p)\)\\
 \\
-\textbf{\uline{C4S4: The Binomial Distribution}}\\
+\textbf{\uline{C4S2: The Binomial Distribution}}\\
 \(X \sim \textnormal{Bin}(n, p)\)\\
 \(p(x) = {n \choose x} p^x(1-p)^{n-x}\)\\
 \(\mathds{E}[X] = \mu_X = n\cdot p\)\\
@@ -143,8 +167,22 @@ Var(x-y) = Var(x) + Var(y)\\
 \(\hat{p} = \frac{x}{n} = \frac{\sum Y_i}{n}\) where \(\hat{p}\) is an estimator of \textit{p}.\\
 \(\mathds{E}[\hat{p}] = \mu_{\hat{p}}  = p\)\\
 \(\textnormal{Var}(\hat{p}) = \frac{p\cdot (1-p)}{n}\)\\
-\vfill
-\columnbreak
-\vspace*{\fill}
+\textbf{\uline{C4S3: The Poisson Distribution}}\\
+\(\lambda = n \cdot p\)\\
+\(X \sim \textnormal{Poisson}(\lambda)\)\\
+\(p(x) = \frac{e^{-\lambda}\cdot \lambda^x}{x!}\)\\
+\(\mathds{E}[X] = \mu_X = \lambda\)\\
+\(\textnormal{Var}(X) = \lambda\)\\
+\textbf{\uline{C4S4: The Hypergeometric Distribution}}\\
+\(X \sim H(N, R, n)\)\\
+\(p(x) = \frac{{R \choose X}{{N-R} \choose {n-x}}}{{N \choose n}}\)\\
+\(\mathds{E}[X] = \mu_X = n\cdot \frac{R}{N}\)\\
+\(\textnormal{Var}(X) = n\frac{R}{N}\cdot(1-\frac{R}{N})\cdot(\frac{N-n}{N-1})\)\\
+\textbf{\uline{Geometric Distribution:}}\\
+\(X \sim \textnormal{Geom}(P)\)\\
+\(p(x) = (1-p)^{x-1} \cdot p\)\\
+\(\mathds{E}[X] = \mu_X = \frac{1}{p}\)\\
+\(\textnormal{Var}(X) = \frac{1-p}{p^2}\)\\
+\(\sigma_X = \sqrt{\frac{1-p}{p^2}}\)\\
 \end{multicols}
 \end{document}
