@@ -1,0 +1,109 @@
+\documentclass[letter, 12pt]{article}
+\usepackage[margin=0.6in,paperwidth=8.5in, paperheight=11in]{geometry}
+\usepackage{graphicx,longtable, stmaryrd, ulem, setspace,listings,enumerate,tikz,fancyhdr,multicol, hyperref, calrsfs, float,ifpdf, url, amsmath, amssymb, comment,color,xcolor,dsfont}
+\usepackage[mathscr]{euscript}
+\pagestyle{fancy}
+
+\renewcommand{\headrulewidth}{0pt}
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\grey}[1]{\textcolor{gray}{#1}}
+\newcommand{\ohm}{$\Omega$}
+\DeclareMathOperator{\Error}{Error}
+\allowdisplaybreaks
+\graphicspath {{figures/}}
+\usepackage[utf8]{inputenc}
+ \usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+  language=R,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+\begin{document}
+\begin{center}
+STAT 4033
+\end{center}
+Exam 3 Notes \hfill Name: \uline{Cooper Morris}
+\begin{multicols}{2}
+\textbf{\uline{C4S6:}}\\
+\textbf{\uline{The Lognormal Distribution}}\\
+\(Y \sim Lognorm(\mu, \sigma)\)\\
+\(E[Y] = e^{\mu+\sigma^2/2}\)\\
+\(Var(Y) = \sigma_y^2 = e^{2\mu} \cdot (e^{2\sigma^2} - e^{\sigma^2})\)\\
+\(P(a\leq Y \leq b) = P(\frac{\ln a -\mu}{\sigma} \leq Z \leq \frac{\ln b -\mu}{\sigma})\)\\
+\textbf{\uline{C4S7:}}\\
+\textbf{\uline{The Exponential Distribution}}\\
+\(Y \sim Exp(\lambda)\)\\
+\(E[Y] = \frac{1}{\lambda}\)\\
+\(Var(Y) = \frac{1}{\lambda^2}\)\\
+\(P(X>x) = e^{-\lambda\cdot x}\)\\
+\(P(X\leq x) = 1-e^{-\lambda\cdot x}\)\\
+\textbf{\uline{C4S11:}}\\
+\textbf{\uline{The Central Limit Theorem}}\\
+\(\bar{X} \dot{\sim} N(\mu, \frac{\sigma}{\sqrt{n}})\)\\
+\(z = \frac{x-\mu}{\frac{\sigma}{\sqrt{n}}}\)\\
+Let \(X\sim Bin(n,p)\) given sufficient sample size \(X\dot{\sim} N(np, np(1-p))\)\\
+Sufficient sample size if \(n\cdot\hat{p}\) and \(n\cdot(1-\hat{p})\) are both greater than 10\\
+\(\hat{p}\dot{\sim} N(p, \frac{p(1-p)}{n}\)\\
+Let \(X \sim Poi(\lambda)\) if \(\lambda\) is large enough we can use \(X\dot{\sim} N(\lambda, \lambda)\)\\
+\(z = \frac{x-\lambda}{\sqrt{\lambda}}\)\\
+Sample size is sufficient if \(\lambda > 10\)\\
+\textbf{\uline{C5S1:}}\\
+\textbf{\uline{Large Sample Confidence Intervals}}\\
+\(\bar{x} \pm z_{\alpha/2}\cdot\frac{\sigma}{\sqrt{n}}\)\\
+Sufficient sample size: \(n \geq (\frac{z_{\alpha/2}\cdot\sigma}{E})^2\)\\
+Always round sample size up to next integer\\
+Get z value from last row of Table A3 where \(\nu = \infty\)\\
+\begin{tabular}{c|cccc}
+Confidence Level & 90\%  & 95\%  & 98\%  & 99\%  \\ \hline
+\(\alpha\)           & 0.10  & 0.05  & 0.02  & 0.01  \\ \hline
+\(z_{\alpha/2}\)  & 1.645 & 1.960 & 2.326 & 2.576
+\end{tabular}
+\textbf{\uline{C5S2:}}\\
+\textbf{\uline{Confidence Intervals for Proportions}}\\
+\(\tilde{n} = n+4\) and \(\tilde{p} = \frac{x+2}{n+4}\)\\
+\(\tilde{p} \pm z_{\alpha}\cdot\sqrt{\frac{\tilde{p}(1-\tilde{p})}{\tilde{n}}}\)\\
+\textbf{\uline{C5S3:}}\\
+\textbf{\uline{Small Sample Confidence Intervals}}\\
+\(\bar{x} \pm t_{\alpha/2, \nu}\cdot\frac{s}{\sqrt{n}}\)\\
+Sufficient sample size: \(n \geq (\frac{t_{\alpha/2, \nu}\cdot s}{E})^2\)\\
+
+\textbf{\uline{C5S6:}}\\
+\textbf{\uline{Small Sample Confidence Intervals for Difference Between Two Means}}\\
+If \(\sigma_1 = \sigma_2\)\\
+\(s_p = \sqrt{\frac{(n_1)s^2_1+(n_2-1)s^2_2}{n_1+n_2-2}}\)\\
+\(\nu = n_1+n_2-2\)\\
+\((\bar{x_1}-\bar{x_2})\pm t_{\alpha/2,v}\cdot s_p\cdot\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}\)\\
+If \(\sigma_1 \neq \sigma_2\)\\
+\[\nu = \frac{(\frac{s^2_1}{n^1}+\frac{s^2_2}{n_2})^2}{\frac{(\frac{s^2_1}{n_1})^2}{n_1-1}+\frac{(\frac{s^2_2}{n_2})^2}{n_2-1}}\]\\
+\((\bar{x_1}-\bar{x_2})\pm t_{\alpha/2,v}\cdot\sqrt{\frac{s_1^2}{n_1}+\frac{s^2_2}{n_2}}\)\\
+\textbf{\uline{C5S9:}}\\
+\textbf{\uline{Confidence Intervals}}\\
+Prediction Intervals:\\
+\(\bar{x}\pm t_{\alpha/2, \nu}\cdot s \cdot \sqrt{1+\frac{1}{n}}\)\\
+Tolerance Intervals:
+\(\bar{x} \pm k_{n, \alpha, \gamma} \cdot s\)\\
+Use Table A4.\\
+\(\gamma\) contains x\% of the sample\\
+\(\alpha\) is with x\% confidence\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{multicols}
+
+\end{document}
